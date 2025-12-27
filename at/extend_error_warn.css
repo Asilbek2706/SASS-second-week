@@ -1,0 +1,28 @@
+/*! @extend */
+.error, .another-error, .error--serious {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+.error--serious {
+  border-width: 3px;
+}
+
+.strong-button {
+  border-radius: 4px;
+  color: white;
+  background-color: black;
+}
+
+.strong-button {
+  font-weight: bold;
+}
+
+/*! @error */
+.sidebar {
+  right: 2px;
+}
+
+/*! @warn */
+.side-bar {
+  top: 12px;
+}/*# sourceMappingURL=extend_error_warn.css.map */

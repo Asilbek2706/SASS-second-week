@@ -1,0 +1,53 @@
+/*! @extend */
+.error {
+    border: 1px #f00;
+    background-color: #fdd;
+
+    &--serious {
+        @extend .error;
+        border-width: 3px; 
+    }
+}
+
+.another-error {
+    @extend .error;
+}
+
+%button {
+    border-radius: 4px;
+    color: white;
+    background-color: black;
+}
+
+.strong-button {
+    @extend %button;
+    font-weight: bold;
+}
+
+/*! @error */
+@mixin reflexive-position($property, $value) {
+    @if $property != left and $property != right {
+        @error "Xossa #{$property} left yoki right bo'lishi shart!";
+    } 
+
+    //Kodning qolgan qismi
+    #{$property}: $value;
+}
+
+.sidebar{
+    @include reflexive-position(right, 2px)
+}
+
+/*! @warn */
+@mixin reflexive-position($property, $value) {
+    @if unitless($value) {
+        @warn "O'lchov birligiga egan bo'lmagani uchun 'px' ga o'giriladi";
+        $value: $value * 1px;
+    }
+
+    #{$property}: $value;
+}
+
+.side-bar{
+    @include reflexive-position(top, 12)
+}
