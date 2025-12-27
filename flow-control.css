@@ -1,0 +1,84 @@
+/*! @if */
+.square-av {
+  width: 100px;
+  height: 100px;
+}
+
+.circle-av {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+/*! @else */
+.banner {
+  background-color: #f2ece4;
+  color: #036;
+}
+body.dark .banner {
+  background-color: #6b717f;
+  color: #d2e1dd;
+}
+
+/*! @each */
+.icon-40px {
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+}
+
+.icon-50px {
+  font-size: 50px;
+  height: 50px;
+  width: 50px;
+}
+
+.icon-60px {
+  font-size: 60px;
+  height: 60px;
+  width: 60px;
+}
+
+.icon-eye:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "\f112";
+}
+
+.icon-start:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "\f12e";
+}
+
+.icon-stop:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "\f12f";
+}
+
+/*! @for */
+ul:nth-child(3n+1) {
+  background-color: rgb(0, 63.75, 127.5);
+}
+
+ul:nth-child(3n+2) {
+  background-color: rgb(0, 76.5, 153);
+}
+
+ul:nth-child(3n+3) {
+  background-color: rgb(0, 89.25, 178.5);
+}
+
+/*! @while */
+.counter-3 {
+  background-color: rgb(219.3, 219.3, 219.3);
+}
+
+.counter-2 {
+  background-color: rgb(214.2, 214.2, 214.2);
+}
+
+.counter-1 {
+  background-color: rgb(209.1, 209.1, 209.1);
+}/*# sourceMappingURL=flow-control.css.map */
