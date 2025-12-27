@@ -1,0 +1,53 @@
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+// .list {
+//     @include reset-list
+// }
+// .another-list {
+//     @include reset-list;
+// }
+
+@mixin horizontal-list {
+    @include reset-list();
+
+    li {
+        display: inline-block;
+        margin: {
+            left: -2px;
+            right: 2em;
+        }
+    }
+}
+
+nav {
+    ul {
+        @include horizontal-list()
+    }
+}
+
+/* Argumentlar bilan ishlash */
+@mixin button($background-color, $color, $hover-color) {
+    background-color: $background-color;
+    color: $color;
+    &:hover {
+        color: $hover-color;
+    }
+}
+
+.btn-danger {
+    @include button(red, white, #ccc)
+}
+
+/*! @function */
+@function add($first, $second) {
+    $result: $first + $second;
+    @return $result;
+}
+
+.sidebar {
+    float: left;
+    margin-left: add(10, 20) * 1px;
+}
