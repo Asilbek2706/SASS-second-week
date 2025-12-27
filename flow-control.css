@@ -1,3 +1,8 @@
+.color {
+  color: blue;
+  border: 1px solid #3333ff;
+}
+
 /*! @if */
 .square-av {
   width: 100px;
@@ -81,4 +86,6 @@ ul:nth-child(3n+3) {
 
 .counter-1 {
   background-color: rgb(209.1, 209.1, 209.1);
-}/*# sourceMappingURL=flow-control.css.map */
+}
+
+/*# sourceMappingURL=flow-control.css.map */
